@@ -18,7 +18,7 @@ class Api::V1::MeetingsController < ApplicationController
     @meeting = Meeting.new(meeting_params)
 
     if @meeting.save
-      render json: @meeting, status: :created, location: @meeting
+      render json: @meeting, status: :created, location: api_v1_meetings_path(@meeting)
     else
       render json: @meeting.errors, status: :unprocessable_entity
     end
