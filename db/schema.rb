@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_28_201221) do
+ActiveRecord::Schema.define(version: 2020_11_29_142718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "meetings", force: :cascade do |t|
     t.text "subject"
-    t.text "notes"
-    t.text "action_items"
+    t.text "notes", default: "notes default"
+    t.text "action_items", default: "action items default"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
