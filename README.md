@@ -1,5 +1,5 @@
 # README
 
-Added CORS gem
+This is the Rails API for the React Meeting Notes app. 
 
-Get all: http://localhost:3001/api/v1/meetings
+For reference: get all is at http://localhost:3001/api/v1/meetings
